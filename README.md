@@ -73,15 +73,11 @@ AI와 데이터 기반 기능을 실제 서비스에 적용하는 데 관심이 
 
 ---
 
-## 📈 GitHub Stats
+## 📈 GitHub Activity
 
-<div align="center">
+![GitHub followers](https://img.shields.io/github/followers/broBbang2?style=social)
 
-![GitHub Stats](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=broBbang2&show_icons=true&theme=transparent)
-
-![Top Langs](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=broBbang2&layout=compact&theme=transparent)
-
-</div>
+![GitHub User's stars](https://img.shields.io/github/stars/broBbang2?style=social)
 
 ---
 
