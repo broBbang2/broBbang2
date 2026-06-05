@@ -77,9 +77,9 @@ AI와 데이터 기반 기능을 실제 서비스에 적용하는 데 관심이 
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=broBbang2&show_icons=true&theme=transparent)
+![GitHub Stats](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=broBbang2&show_icons=true&theme=transparent)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=broBbang2&layout=compact&theme=transparent)
+![Top Langs](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=broBbang2&layout=compact&theme=transparent)
 
 </div>
 
