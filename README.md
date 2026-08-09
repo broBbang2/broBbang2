@@ -1,9 +1,7 @@
 <div align="center">
 
-# 안녕하세요, 김민식입니다 👋
+# Hello, I'm Minsik 👋
 
-코드 한 줄도 중요하지만, 모두 함께 협업해 만들고 싶은 프론트엔드 개발자입니다.
-문제를 발견하면 원인을 끝까지 추적하고, 해결 과정을 팀원들과 공유하는 것을 중요하게 생각합니다.
 
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:msk990719@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/broBbang2)
