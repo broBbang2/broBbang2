@@ -1,5 +1,5 @@
 <!-- Header -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:667EEA,100:764BA2&height=200&section=header&text=Minsik%20Kim&fontSize=56&fontColor=ffffff&fontAlignY=36&desc=Frontend%20Developer%20%C2%B7%20Product%20Builder&descAlignY=58&descSize=18" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:667EEA,100:764BA2&height=200&section=header&text=Minsik%20Kim&fontSize=56&fontColor=ffffff&fontAlignY=36&desc=Frontend%20Developer&descAlignY=58&descSize=18" width="100%" />
 
 <div align="center">
 
@@ -14,34 +14,33 @@
 
 <br/>
 
+<div align="center">
+
+<!-- 커밋할수록 동물이 생기고 자라는 GitAnimals 농장 -->
+<a href="https://github.com/git-goods/gitanimals">
+  <img src="https://render.gitanimals.org/farms/broBbang2" width="600" />
+</a>
+
+<br/><br/>
+
+<!-- 잔디를 먹는 뱀 (.github/workflows/snake.yml 필요) -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/broBbang2/broBbang2/output/github-snake-dark.svg" />
+  <img alt="contribution snake" src="https://raw.githubusercontent.com/broBbang2/broBbang2/output/github-snake.svg" />
+</picture>
+
+</div>
+
+<br/>
+
 ## 👋 About Me
 
 안녕하세요, 프론트엔드 개발자 **김민식**입니다.
-
-경영학을 전공하면서 AI·빅데이터를 부전공으로 공부했고, 데이터를 다루다 보니 결국 **사람이 직접 만지는 화면**을 만드는 일에 끌려 개발자가 되었습니다.
-"이 서비스를 왜 쓰는가"를 먼저 묻는 경영학 습관 덕분에, 기능을 만들 때도 사용자 흐름과 숫자를 함께 봅니다.
-
-스타트업 **데브언리밋**에서 Product Builder로 일하며 하나의 팀에서 웹·앱·키오스크·AI 파이프라인을 모두 맡았고,
-기획부터 배포, 실기기 테스트까지 혼자 끝까지 책임지는 방식으로 일해 왔습니다.
+"이 서비스를 왜 쓰는가"를 먼저 묻고, 기능을 만들 때도 사용자 흐름과 숫자를 함께 봅니다.
 
 - 🖥 웹(Next.js)·앱(React Native)·키오스크까지 **사용자가 닿는 모든 화면**을 만들어 봤습니다
 - 📏 느낌이 아니라 **실측으로 병목을 찾고**, 개선 결과를 숫자로 남깁니다
 - 🤖 AI 기능을 데모가 아닌 **실제 서비스 흐름 안에** 녹이는 데 관심이 많습니다
-
-<table>
-<tr>
-<td>🎓 <b>Education</b></td>
-<td>우송대학교 경영학 전공 · AI·빅데이터 부전공 <sub>(2018.03 – 2025.08)</sub></td>
-</tr>
-<tr>
-<td>💼 <b>Career</b></td>
-<td>(주)데브언리밋 Product Builder <sub>(2026.07 – 2026.10)</sub></td>
-</tr>
-<tr>
-<td>📍 <b>Interest</b></td>
-<td>UI/UX · 프론트엔드 성능 · AI 서비스</td>
-</tr>
-</table>
 
 <br/>
 
@@ -58,10 +57,7 @@
 
 <br/>
 
-## 💼 Experience
-
-### (주)데브언리밋 · Product Builder <sub>`2026.07 – 2026.10`</sub>
-K-pop 댄스 플랫폼 **Sparky**와 외주 프로젝트 4건을 웹·앱·키오스크에 걸쳐 개발했습니다.
+## 🚀 Projects
 
 <details open>
 <summary><b>🕺 Sparky</b> — K-pop 글로벌 댄스 앱 · <code>React Native</code></summary>
@@ -113,7 +109,7 @@ K-pop 댄스 플랫폼 **Sparky**와 외주 프로젝트 4건을 웹·앱·키�
 
 <br/>
 
-## 🚀 Side Project
+## 🍶 Personal Project
 
 <table>
 <tr>
@@ -155,30 +151,8 @@ K-pop 댄스 플랫폼 **Sparky**와 외주 프로젝트 4건을 웹·앱·키�
 
 <br/>
 
-## 🌱 Activity
-
-<div align="center">
-
-<!-- 커밋할수록 동물이 생기고 자라는 GitAnimals 농장 -->
-<a href="https://github.com/git-goods/gitanimals">
-  <img src="https://render.gitanimals.org/farms/broBbang2" width="600" />
-</a>
-
-<br/><br/>
-
-<!-- 잔디를 먹는 뱀 (.github/workflows/snake.yml 필요) -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/broBbang2/broBbang2/output/github-snake-dark.svg" />
-  <img alt="contribution snake" src="https://raw.githubusercontent.com/broBbang2/broBbang2/output/github-snake.svg" />
-</picture>
-
-</div>
-
-<br/>
-
 ## 🎯 Now
 
-- 🧭 React Native·Next.js 실무 경험을 바탕으로 다음 팀을 찾고 있어요
 - 🧪 테스트로 안정성을 담보하는 개발 습관 만들기
 - 🎨 UI/UX를 공부하며 디자이너와 같은 언어로 이야기하기
 
