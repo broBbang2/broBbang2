@@ -88,15 +88,6 @@
 
 </details>
 
-<details open>
-<summary><b>🧩 <a href="https://github.com/broBbang2/LLM-wiki-merge-skill">LLM Wiki Merge Skill</a></b> — LLM이 관리하는 위키의 Git 충돌 해결 에이전트 스킬</summary>
-<br/>
-
-- 추가 기록 · 자동 생성 파일 · 지식/결정 문서를 구분해 파일 역할별로 충돌 해결 규칙 설계
-- 양쪽 기록은 모두 보존하고, 근거로 판단할 수 없는 의미 충돌만 사용자에게 확인
-
-</details>
-
 <details>
 <summary><b>🎨 <a href="https://github.com/broBbang2/Personal-Color">Personal-Color</a></b> — 퍼스널 컬러 분류 모델</summary>
 <br/>
