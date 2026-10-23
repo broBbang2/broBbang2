@@ -1,9 +1,9 @@
 <!-- Header -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:667EEA,100:764BA2&height=200&section=header&text=Minsik%20Kim&fontSize=56&fontColor=ffffff&fontAlignY=36&desc=Frontend%20Developer&descAlignY=58&descSize=18" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:667EEA,100:764BA2&height=200&section=header&text=Minsik%20Kim&fontSize=56&fontColor=ffffff&fontAlignY=36&desc=Frontend%20%C2%B7%20AI%20Developer&descAlignY=58&descSize=18" width="100%" />
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Noto+Sans+KR&weight=600&size=20&duration=3000&pause=1000&color=667EEA&center=true&vCenter=true&width=520&lines=%EC%82%AC%EC%9A%A9%EC%9E%90+%EA%B2%BD%ED%97%98%EC%97%90%EC%84%9C+%EC%B6%9C%EB%B0%9C%ED%95%B4+%EB%81%9D%EA%B9%8C%EC%A7%80+%EB%A7%8C%EB%93%AD%EB%8B%88%EB%8B%A4;%EB%B3%91%EB%AA%A9%EC%9D%80+%EC%B8%A1%EC%A0%95%ED%95%98%EA%B3%A0%2C+%EC%88%AB%EC%9E%90%EB%A1%9C+%EC%A4%84%EC%9E%85%EB%8B%88%EB%8B%A4;Web+%C2%B7+App+%C2%B7+Kiosk+%C2%B7+AI+Pipeline" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Noto+Sans+KR&weight=600&size=20&duration=3000&pause=1000&color=667EEA&center=true&vCenter=true&width=520&lines=%EC%82%AC%EC%9A%A9%EC%9E%90+%EA%B2%BD%ED%97%98%EC%97%90%EC%84%9C+%EC%B6%9C%EB%B0%9C%ED%95%B4+%EB%81%9D%EA%B9%8C%EC%A7%80+%EB%A7%8C%EB%93%AD%EB%8B%88%EB%8B%A4;%EB%B3%91%EB%AA%A9%EC%9D%80+%EC%B8%A1%EC%A0%95%ED%95%98%EA%B3%A0%2C+%EC%88%AB%EC%9E%90%EB%A1%9C+%EC%A4%84%EC%9E%85%EB%8B%88%EB%8B%A4;Web+%C2%B7+App+%C2%B7+AI" alt="Typing SVG" />
 
 <br/>
 
@@ -40,7 +40,7 @@
 
 - 🖥 웹(Next.js)·앱(React Native)·키오스크까지 **사용자가 닿는 모든 화면**을 만들어 봤습니다
 - 📏 느낌이 아니라 **실측으로 병목을 찾고**, 개선 결과를 숫자로 남깁니다
-- 🤖 AI 기능을 데모가 아닌 **실제 서비스 흐름 안에** 녹이는 데 관심이 많습니다
+- 🤖 AI를 데모가 아닌 **실제 서비스 흐름 안에** 녹이고, 모델 위에 얹는 **제품 로직**을 직접 설계합니다
 
 <br/>
 
@@ -48,16 +48,66 @@
 
 <div align="center">
 
-| ⏱ AI 프리뷰 대기 | 🔍 태그 필터 응답 | 📱 모바일 결제 바 | 🎞 키오스크 버벅임 |
+| ⏱ AI 프리뷰 대기 | 🔍 태그 필터 응답 | ⚫ 바둑 급수 추정 | 🎞 키오스크 버벅임 |
 | :---: | :---: | :---: | :---: |
-| **209s → 97s** | **2,007ms → 262ms** | **294px → 82px** | **missed vsync 20 → 8** |
-| 54% 단축 | 87% 단축 | 화면 점유 36% → 10% | janky 13.8% → 10.5% |
+| **209s → 97s** | **2,007ms → 262ms** | **20수 만에 89%** | **missed vsync 20 → 8** |
+| 54% 단축 | 87% 단축 | ±1급 이내 적중 | janky 13.8% → 10.5% |
 
 </div>
 
 <br/>
 
-## 🚀 Projects
+## 🤖 AI Projects
+
+<table>
+<tr>
+<td width="100%">
+
+### ⚫ [Let's learn Go](https://github.com/broBbang2/Let-s-learn-Go) — 나와 같이 성장하는 적응형 바둑 AI
+> 너무 강해서 재미없는 바둑 AI 대신, 내 실력을 **수 단위로 추정**하고 그 급수 사람이 둘 법한 **사람 같은 실수**를 하는 상대
+
+- KataGo를 두뇌로 쓰고, 그 위에 **사용자 모델 + 난이도 조절** 두 층을 직접 설계
+- 매 수마다 베이즈 갱신으로 20급~9단 급수 추정 — **20수 만에 89%가 ±1급 이내**
+- 난이도 v1 → v2 → v3 개선: 손실 크기만 맞추던 v2(사람 top-3 일치 **9~30%**)를 human 모델 기반 v3로 바꿔 **70~78%**
+- 판 결과로 보정 계수를 갱신해 사용자 승률 **45%** 근처로 수렴하도록 설계
+- 측정 지표가 급수 순서를 뒤집던 문제를 추적해 접전 국면 기준으로 재정의, 리그전 판당 **90초 → 59초**
+- 표준 라이브러리만으로 서버·프론트 구현, 가짜 KataGo로 엔진 없이 도는 **테스트 98개**
+
+`Python` `KataGo` `Bayesian Inference` `Glicko-2` `SVG`
+
+</td>
+</tr>
+</table>
+
+<details open>
+<summary><b>📷 <a href="https://github.com/broBbang2/MSCV">MSCV</a></b> — 아이폰 실시간 사물 인식 · <code>YOLO</code> <code>SAM</code> <code>CoreML</code> · 🚧 진행 중</summary>
+<br/>
+
+- 데이터 0장에서 시작해 수집 → 라벨링 → 학습 → 개선 → 온디바이스 배포까지 객체 탐지 파이프라인 전체를 직접 구축
+- 정확도(mAP)와 속도(FPS)를 매 단계 함께 측정, SAM 텍스트 프롬프트 자동 라벨링과 액티브 러닝까지 계획
+
+</details>
+
+<details open>
+<summary><b>🧩 <a href="https://github.com/broBbang2/LLM-wiki-merge-skill">LLM Wiki Merge Skill</a></b> — LLM이 관리하는 위키의 Git 충돌 해결 에이전트 스킬</summary>
+<br/>
+
+- 추가 기록 · 자동 생성 파일 · 지식/결정 문서를 구분해 파일 역할별로 충돌 해결 규칙 설계
+- 양쪽 기록은 모두 보존하고, 근거로 판단할 수 없는 의미 충돌만 사용자에게 확인
+
+</details>
+
+<details>
+<summary><b>🎨 <a href="https://github.com/broBbang2/Personal-Color">Personal-Color</a></b> — 퍼스널 컬러 분류 모델</summary>
+<br/>
+
+- AI·빅데이터 공부를 시작하며 만든 첫 분류 모델 프로젝트
+
+</details>
+
+<br/>
+
+## 🚀 Service Projects
 
 <details open>
 <summary><b>🕺 Sparky</b> — K-pop 글로벌 댄스 앱 · <code>React Native</code></summary>
@@ -115,7 +165,7 @@
 <tr>
 <td width="100%">
 
-### 🍶 [Choice](https://github.com/broBbang2/choice) — AI 취향 맞춤 주류 추천
+### 🍶 [Choice](https://github.com/broBbang2/give-me-recommend) — AI 취향 맞춤 주류 추천
 술을 처음 접하는 사회초년생이 대화만으로 자기에게 맞는 술을 찾도록 만든 서비스
 
 - 태그 필터링을 DB 쿼리 + GIN 인덱스로 전환 — **2,007ms → 262ms (87%↓)**
@@ -142,10 +192,13 @@
 **Backend · Infra**<br/>
 <img src="https://skillicons.dev/icons?i=nodejs,python,supabase,firebase,gcp&theme=dark" />
 
+**AI · ML**<br/>
+<img src="https://skillicons.dev/icons?i=python,pytorch,opencv&theme=dark" />
+
 **Test · Tools**<br/>
 <img src="https://skillicons.dev/icons?i=vitest,figma&theme=dark" />
 
-<sub>+ React Native · Zustand · TanStack Query · Hono · Playwright · Remotion · Storybook · OpenAI API</sub>
+<sub>+ React Native · Zustand · TanStack Query · Hono · Playwright · Remotion · Storybook<br/>+ KataGo · YOLO · SAM · CoreML · OpenAI API</sub>
 
 </div>
 
@@ -153,6 +206,7 @@
 
 ## 🎯 Now
 
+- 📷 MSCV — 직접 모은 데이터로 YOLO 파인튜닝하고 아이폰 온디바이스로 올리기
 - 🧪 테스트로 안정성을 담보하는 개발 습관 만들기
 - 🎨 UI/UX를 공부하며 디자이너와 같은 언어로 이야기하기
 
