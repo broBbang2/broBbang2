@@ -69,7 +69,7 @@ flowchart LR
     D --> S[학생 YOLO26s<br/>파인튜닝]
     S --> C[CoreML 8bit + NMS]
     C --> I[아이폰 Neural Engine<br/>트래커 + LiDAR 거리]
-    I -.0.5초마다 프레임 저장.-> A
+    I -.->|"0.5초마다 프레임 저장"| A
 ```
 
 - **지식 증류 구조 설계** — 아이폰에서 못 도는 큰 모델(YOLOE)은 라벨을 만드는 선생님으로, 약 950만 파라미터의 YOLO26s를 배포용 학생으로
