@@ -44,20 +44,48 @@
 
 <br/>
 
-## 📊 Highlights
-
-<div align="center">
-
-| ⏱ AI 프리뷰 대기 | 🔍 태그 필터 응답 | ⚫ 바둑 급수 추정 | 🎞 키오스크 버벅임 |
-| :---: | :---: | :---: | :---: |
-| **209s → 97s** | **2,007ms → 262ms** | **20수 만에 89%** | **missed vsync 20 → 8** |
-| 54% 단축 | 87% 단축 | ±1급 이내 적중 | janky 13.8% → 10.5% |
-
-</div>
-
-<br/>
-
 ## 🤖 AI Projects
+
+<table>
+<tr>
+<td width="100%">
+
+### 📷 [MSCV](https://github.com/broBbang2/MSCV) — 아이폰 온디바이스 실시간 사물 인식
+> **큰 모델이 가르치고, 작은 모델이 아이폰 안에서 혼자 돈다.**<br/>
+> 데이터 0장에서 시작해 수집 → 자동 라벨링 → 학습 → CoreML 배포 → 재학습까지, 객체 탐지 파이프라인 전체를 직접 구축
+
+<p align="center">
+<img src="https://img.shields.io/badge/iPhone-30%20FPS-667EEA?style=for-the-badge" />
+<img src="https://img.shields.io/badge/inference-16ms-667EEA?style=for-the-badge" />
+<img src="https://img.shields.io/badge/model-9.3MB-764BA2?style=for-the-badge" />
+<img src="https://img.shields.io/badge/classes-20-764BA2?style=for-the-badge" />
+</p>
+
+```mermaid
+flowchart LR
+    A[아이폰 영상·앱 프레임] --> T[선생님 YOLOE-26L<br/>텍스트 프롬프트 라벨링]
+    O[(LVIS·COCO·Open Images)] --> D
+    T --> D[(학습 데이터 20클래스)]
+    D --> S[학생 YOLO26s<br/>파인튜닝]
+    S --> C[CoreML 8bit + NMS]
+    C --> I[아이폰 Neural Engine<br/>트래커 + LiDAR 거리]
+    I -.0.5초마다 프레임 저장.-> A
+```
+
+- **지식 증류 구조 설계** — 아이폰에서 못 도는 큰 모델(YOLOE)은 라벨을 만드는 선생님으로, 약 950만 파라미터의 YOLO26s를 배포용 학생으로
+- **프롬프트 채점으로 라벨 품질 개선** — 클래스별 이름 조합을 공개 사진 300장으로 채점해 선생님 AP50 **0.59 → 0.65** (모니터 **0.22 → 0.83**)
+- **데이터 9배 확장** — 자동 라벨링 + 공개 데이터 혼합으로 **510장 → 약 4,600장**, train/val은 영상 단위로 나눠 점수 부풀림 방지
+- **온디바이스 최적화** — CoreML 8비트 양자화에 NMS까지 내장해 **18MB → 9.3MB**, 실기기 측정 **30 FPS · 추론 16ms**
+- **끊김 없는 화면** — 프레임 간 박스를 잇는 트래커로 깜빡임·오탐 제거, LiDAR 깊이 중앙값으로 물체 거리 표시
+- **자동 학습 사이클** — 앱 프레임 수집 → 라벨 → 학습 → 기존 모델과 mAP 비교 → 더 나으면 아이폰에 자동 설치
+
+> 🚧 **현재 과제** — 속도·크기 목표는 달성했지만 정확도는 mAP50 **0.37**(목표 0.7)입니다. 원인을 데이터 다양성 · 라벨 검수 · 시험 세트 신뢰도 · 도메인 차이 · 모션 블러로 나눠 분석했고, 사람이 검수한 시험 세트부터 만들고 있습니다.
+
+`Python` `PyTorch` `Ultralytics YOLO` `YOLOE` `CoreML` `Swift` `SwiftUI` `Vision`
+
+</td>
+</tr>
+</table>
 
 <table>
 <tr>
@@ -66,11 +94,17 @@
 ### ⚫ [Let's learn Go](https://github.com/broBbang2/Let-s-learn-Go) — 나와 같이 성장하는 적응형 바둑 AI
 > 너무 강해서 재미없는 바둑 AI 대신, 내 실력을 **수 단위로 추정**하고 그 급수 사람이 둘 법한 **사람 같은 실수**를 하는 상대
 
+<p align="center">
+<img src="https://img.shields.io/badge/rank%20estimate-89%25%20within%20±1-667EEA?style=for-the-badge" />
+<img src="https://img.shields.io/badge/human--like-70~78%25-764BA2?style=for-the-badge" />
+<img src="https://img.shields.io/badge/target%20win-45%25-764BA2?style=for-the-badge" />
+</p>
+
 - KataGo를 두뇌로 쓰고, 그 위에 **사용자 모델 + 난이도 조절** 두 층을 직접 설계
 - 매 수마다 베이즈 갱신으로 20급~9단 급수 추정 — **20수 만에 89%가 ±1급 이내**
-- 난이도 v1 → v2 → v3 개선: 손실 크기만 맞추던 v2(사람 top-3 일치 **9~30%**)를 human 모델 기반 v3로 바꿔 **70~78%**
-- 판 결과로 보정 계수를 갱신해 사용자 승률 **45%** 근처로 수렴하도록 설계
-- 측정 지표가 급수 순서를 뒤집던 문제를 추적해 접전 국면 기준으로 재정의, 리그전 판당 **90초 → 59초**
+- 손실 크기만 맞추던 v2(사람 top-3 일치 **9~30%**)를 human 모델 기반 v3로 바꿔 **70~78%**
+- 판 결과로 보정 계수를 갱신해 사용자 승률 **45%** 근처로 수렴
+- 급수 순서를 뒤집던 측정 지표를 접전 국면 기준으로 재정의, 리그전 판당 **90초 → 59초**
 - 표준 라이브러리만으로 서버·프론트 구현, 가짜 KataGo로 엔진 없이 도는 **테스트 98개**
 
 `Python` `KataGo` `Bayesian Inference` `Glicko-2` `SVG`
@@ -78,15 +112,6 @@
 </td>
 </tr>
 </table>
-
-<details open>
-<summary><b>📷 <a href="https://github.com/broBbang2/MSCV">MSCV</a></b> — 아이폰 실시간 사물 인식 · <code>YOLO</code> <code>SAM</code> <code>CoreML</code> · 🚧 진행 중</summary>
-<br/>
-
-- 데이터 0장에서 시작해 수집 → 라벨링 → 학습 → 개선 → 온디바이스 배포까지 객체 탐지 파이프라인 전체를 직접 구축
-- 정확도(mAP)와 속도(FPS)를 매 단계 함께 측정, SAM 텍스트 프롬프트 자동 라벨링과 액티브 러닝까지 계획
-
-</details>
 
 <details>
 <summary><b>🎨 <a href="https://github.com/broBbang2/Personal-Color">Personal-Color</a></b> — 퍼스널 컬러 분류 모델</summary>
@@ -184,7 +209,7 @@
 <img src="https://skillicons.dev/icons?i=nodejs,python,supabase,firebase,gcp&theme=dark" />
 
 **AI · ML**<br/>
-<img src="https://skillicons.dev/icons?i=python,pytorch,opencv&theme=dark" />
+<img src="https://skillicons.dev/icons?i=python,pytorch,opencv,swift&theme=dark" />
 
 **Test · Tools**<br/>
 <img src="https://skillicons.dev/icons?i=vitest,figma&theme=dark" />
@@ -197,7 +222,7 @@
 
 ## 🎯 Now
 
-- 📷 MSCV — 직접 모은 데이터로 YOLO 파인튜닝하고 아이폰 온디바이스로 올리기
+- 📷 MSCV — 사람이 검수한 시험 세트로 정확도 mAP50 0.37 → 0.7 끌어올리기
 - 🧪 테스트로 안정성을 담보하는 개발 습관 만들기
 - 🎨 UI/UX를 공부하며 디자이너와 같은 언어로 이야기하기
 
