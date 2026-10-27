@@ -3,10 +3,6 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Noto+Sans+KR&weight=600&size=20&duration=3000&pause=1000&color=667EEA&center=true&vCenter=true&width=520&lines=%ED%81%B0+%EB%AA%A8%EB%8D%B8%EC%9D%B4+%EA%B0%80%EB%A5%B4%EC%B9%98%EA%B3%A0%2C+%EC%9E%91%EC%9D%80+%EB%AA%A8%EB%8D%B8%EC%9D%B4+%EA%B8%B0%EA%B8%B0%EC%97%90%EC%84%9C+%EB%8F%95%EB%8B%88%EB%8B%A4;%EC%A0%90%EC%88%98%EB%8A%94+%EB%B6%80%ED%92%80%EB%A6%AC%EC%A7%80+%EC%95%8A%EA%B3%A0%2C+%ED%95%9C%EA%B3%84%EB%8A%94+%EC%88%A8%EA%B8%B0%EC%A7%80+%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4;Data+%E2%86%92+Label+%E2%86%92+Train+%E2%86%92+Deploy" alt="Typing SVG" />
-
-<br/>
-
 [![Gmail](https://img.shields.io/badge/msk990719@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:msk990719@gmail.com)
 [![GitHub](https://img.shields.io/badge/broBbang2-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/broBbang2)
 
@@ -38,9 +34,9 @@
 안녕하세요, **데이터에서 모델, 그리고 실제 기기까지** 직접 만드는 ML 개발자 **김민식**입니다.
 웹·앱 서비스를 만들며 AI 기능을 제품에 붙여 왔고, 지금은 데이터 수집부터 라벨링 · 학습 · 온디바이스 배포까지 모델을 직접 만드는 일에 집중하고 있습니다.
 
-- 🧪 **실험으로 말합니다** — baseline에서 한 번에 하나씩 바꿔 비교하고, train/val 누수처럼 점수를 부풀리는 요인부터 막습니다
-- 🔍 **병목을 끝까지 추적합니다** — 데이터 양 · 모델 크기를 바꿔 보며 "용량이 아니라 데이터가 병목"임을 실험으로 확인하는 식으로 원인을 좁힙니다
-- 📱 **모델을 제품에 붙여 봤습니다** — 지연 시간, 모델 크기, 무인 운영과 장애 복구까지 서비스 관점에서 함께 설계합니다
+- 🧪 baseline에서 한 번에 하나씩 바꿔 비교하고, train/val 누수처럼 점수를 부풀리는 요인부터 막습니다
+- 🔍 데이터 양 · 모델 크기를 바꿔 보며 "용량이 아니라 데이터가 병목"임을 실험으로 확인하는 식으로 원인을 좁힙니다
+- 📱 모델을 실제 앱·키오스크·운영 파이프라인에 붙여 보며 지연 시간, 모델 크기, 무인 운영과 장애 복구까지 서비스 관점에서 함께 설계합니다
 
 <br/>
 
@@ -51,7 +47,6 @@
 <td width="100%">
 
 ### 📷 [MSCV](https://github.com/broBbang2/MSCV) — 아이폰 온디바이스 실시간 사물 인식
-> **큰 모델이 가르치고, 작은 모델이 아이폰 안에서 혼자 돈다.**<br/>
 > 데이터 0장에서 시작해 수집 → 자동 라벨링 → 학습 → CoreML 배포 → 재학습까지, 객체 탐지 파이프라인 전체를 직접 구축
 
 <p align="center">
